@@ -5,10 +5,9 @@
     "description": "Pets Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3001",
+  "host": "cse341-project-e4n1.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
@@ -21,16 +20,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
