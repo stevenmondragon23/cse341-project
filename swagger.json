@@ -26,17 +26,26 @@
     },
     "/pets/": {
       "get": {
+        "tags": [
+          "pets"
+        ],
         "description": "",
         "produces": [
           "application/json"
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Pets retrieved successfully"
+          },
+          "500": {
+            "description": "Internal server error"
           }
         }
       },
       "post": {
+        "tags": [
+          "pets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -68,17 +77,23 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Pet created successfully"
+          },
+          "400": {
+            "description": "Please provide all required fields"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal server error"
           }
         }
       }
     },
     "/pets/{id}": {
       "get": {
+        "tags": [
+          "pets"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -93,11 +108,20 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Pet retrieved successfully"
+          },
+          "404": {
+            "description": "Pet not found"
+          },
+          "500": {
+            "description": "Internal server error"
           }
         }
       },
       "put": {
+        "tags": [
+          "pets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -136,14 +160,20 @@
         ],
         "responses": {
           "204": {
-            "description": "No Content"
+            "description": "Pet updated successfully"
+          },
+          "400": {
+            "description": "Please provide all required fields"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal server error"
           }
         }
       },
       "delete": {
+        "tags": [
+          "pets"
+        ],
         "description": "",
         "parameters": [
           {
@@ -155,10 +185,10 @@
         ],
         "responses": {
           "204": {
-            "description": "No Content"
+            "description": "Pet deleted successfully"
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal server error"
           }
         }
       }
